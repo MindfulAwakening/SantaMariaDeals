@@ -1,0 +1,69 @@
+{
+  "deals": [
+    {
+      "id": 1,
+      "businessName": "Maria's Pizzeria",
+      "category": "restaurant",
+      "icon": "🍕",
+      "dealTitle": "Family Pizza Deal",
+      "dealDescription": "Get a free medium pizza when you buy two large pizzas. Valid Monday-Thursday.",
+      "discount": "Buy 2 Get 1 Free",
+      "phone": "(805) 555-0123",
+      "address": "123 Main St, Santa Maria, CA",
+      "website": "https://mariaspizzeria.com",
+      "active": true
+    },
+    {
+      "id": 2,
+      "businessName": "Bella Hair Salon",
+      "category": "services",
+      "icon": "✂️",
+      "dealTitle": "New Customer Special",
+      "dealDescription": "20% off all haircuts for new customers. Mention this deal when booking your appointment.",
+      "discount": "20% OFF",
+      "phone": "(805) 555-0456",
+      "address": "456 Broadway, Santa Maria, CA",
+      "website": "https://bellahairsalon.com",
+      "active": true
+    },
+    {
+      "id": 3,
+      "businessName": "FitLife Gym",
+      "category": "health",
+      "icon": "🏋️",
+      "dealTitle": "Membership Special",
+      "dealDescription": "First month free with 6-month membership. Includes all classes and facilities!",
+      "discount": "1 Month Free",
+      "phone": "(805) 555-0789",
+      "address": "789 Oak Avenue, Santa Maria, CA",
+      "website": "https://fitlifegym.com",
+      "active": true
+    },
+    {
+      "id": 4,
+      "businessName": "Joe's Auto Repair",
+      "category": "automotive",
+      "icon": "🔧",
+      "dealTitle": "Oil Change Special",
+      "dealDescription": "Full synthetic oil change for just $39.99. Includes tire rotation and 20-point inspection.",
+      "discount": "$39.99",
+      "phone": "(805) 555-0321",
+      "address": "321 Industrial Way, Santa Maria, CA",
+      "website": "",
+      "active": true
+    },
+    {
+      "id": 5,
+      "businessName": "Sweet Treats Bakery",
+      "category": "restaurant",
+      "icon": "🧁",
+      "dealTitle": "Dozen Donuts Deal",
+      "dealDescription": "Buy a dozen donuts, get 6 free! Fresh baked daily. Available every weekend.",
+      "discount": "50% More Free",
+      "phone": "(805) 555-0654",
+      "address": "654 Cherry Lane, Santa Maria, CA",
+      "website": "https://sweettreats.com",
+      "active": true
+    }
+  ]
+}

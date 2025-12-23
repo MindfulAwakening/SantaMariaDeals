@@ -1,0 +1,215 @@
+# Santa Maria Local Deals - Admin Guide
+
+## 📁 Your Website Files Structure
+
+```
+SantaMariaLocalDeals/
+├── index.html        (main website)
+├── success.html      (thank you page after form submission)
+└── deals.json        (all business listings)
+```
+
+---
+
+## 🎯 How to Update Your Website
+
+### Method 1: Direct Upload to Netlify (Easiest)
+1. Make changes to your files on your computer
+2. Go to Netlify → Your site → "Deploys" tab
+3. Drag your entire folder to the deploy area
+4. Site updates automatically in seconds
+
+### Method 2: Using GitHub (Recommended)
+1. Edit files on GitHub
+2. Commit changes
+3. Netlify auto-deploys when you push changes
+
+---
+
+## 📝 Managing Business Listings
+
+### Adding a New Business Deal
+
+1. Open `deals.json` file
+2. Add a new entry following this format:
+
+```json
+{
+  "id": 6,
+  "businessName": "Your Business Name",
+  "category": "restaurant",
+  "icon": "🍔",
+  "dealTitle": "Short Deal Title",
+  "dealDescription": "Full description of the deal or promotion",
+  "discount": "30% OFF",
+  "phone": "(805) 555-0000",
+  "address": "123 Street Name, Santa Maria, CA",
+  "website": "https://yourbusiness.com",
+  "active": true
+}
+```
+
+3. Save the file
+4. Upload to Netlify
+
+### Icon Options (Copy & Paste)
+- **Food**: 🍕 🍔 🌮 🍜 🍰 🧁 ☕ 🍺
+- **Services**: ✂️ 💇 💅 🔧 🔨 🏠 🚗
+- **Health**: 🏋️ 🧘 💊 🏥 🦷
+- **Shopping**: 👕 👗 👞 💍 🎁 📚
+- **Entertainment**: 🎬 🎮 🎨 🎵 🎪
+
+### Deactivating a Deal
+Change `"active": true` to `"active": false`
+
+### Categories Available
+- `restaurant` - Food & Dining
+- `retail` - Shopping
+- `services` - Services (hair, repair, etc)
+- `health` - Health & Wellness
+- `entertainment` - Entertainment
+- `automotive` - Auto Services
+- `other` - Other
+
+---
+
+## 📧 Receiving Form Submissions
+
+### In Netlify Dashboard:
+1. Go to your site
+2. Click "Forms" in sidebar
+3. Click "business-signup" to see all submissions
+4. Export to CSV if needed
+
+### Email Notifications:
+- Set up in Netlify → Forms → Form notifications
+- You'll receive emails automatically when businesses sign up
+
+---
+
+## 🔄 Workflow for New Business Sign-ups
+
+1. **Business submits form** → You receive email notification
+2. **Review the submission** in Netlify Forms dashboard
+3. **Add business to deals.json** using their information
+4. **Upload updated deals.json** to Netlify
+5. **Email the business** to confirm they're live
+
+---
+
+## 💡 Quick Tips
+
+### To Update Multiple Deals at Once:
+- Edit `deals.json` with all changes
+- Upload once
+- All deals update simultaneously
+
+### To Feature Urgent Deals:
+- Put them at the top of the deals array in `deals.json`
+- They'll appear first on the website
+
+### To Remove Expired Deals:
+- Set `"active": false` instead of deleting
+- Keep the data for records
+
+### Backup Your Data:
+- Download `deals.json` regularly
+- Keep a copy on your computer
+
+---
+
+## 🎨 Customizing Your Site
+
+### Change Colors:
+In `index.html`, find these colors and replace:
+- `#667eea` - Main purple
+- `#764ba2` - Dark purple
+- `#ff6b6b` - Red accent
+
+### Change Contact Email:
+Search for `info@santamarialocaldeals.com` and replace with your email
+
+### Add More Categories:
+In the form section, add new options:
+```html
+<option value="newcategory">New Category</option>
+```
+
+---
+
+## 🆘 Troubleshooting
+
+### Forms Not Working?
+- Make sure `data-netlify="true"` is in the form tag
+- Check Netlify Forms dashboard for errors
+- Verify form name matches in Netlify
+
+### Deals Not Showing?
+- Check `deals.json` for syntax errors (use jsonlint.com)
+- Verify file is named exactly `deals.json`
+- Check browser console for errors (F12 key)
+
+### Need Help?
+- Netlify Support: support.netlify.com
+- JSON Validator: jsonlint.com
+- Test your site: Use different browsers and devices
+
+---
+
+## 📊 Optional Upgrades
+
+### Add Analytics:
+1. Sign up for Google Analytics
+2. Add tracking code to `index.html` before `</head>`
+
+### Add Search/Filter:
+- Filter deals by category
+- Search by business name
+- Sort by discount amount
+
+### Add Business Portal:
+- Let businesses update their own deals
+- Requires backend (Airtable, Firebase, or custom)
+
+### Custom Domain:
+1. Buy domain (GoDaddy, Namecheap)
+2. Add to Netlify in Domain Settings
+3. Follow DNS instructions
+
+---
+
+## ✅ Launch Checklist
+
+- [ ] Test form submission
+- [ ] Verify email notifications work
+- [ ] Add at least 3 real business deals
+- [ ] Test on mobile devices
+- [ ] Share with first businesses
+- [ ] Create social media accounts
+- [ ] Print flyers for local businesses
+- [ ] Add Google Analytics (optional)
+
+---
+
+## 📱 Promoting Your Site
+
+### Tell Local Businesses:
+- Visit businesses in person
+- Bring flyers or business cards
+- Explain it's 100% free
+- Show them the site on your phone
+
+### Social Media:
+- Create Facebook page
+- Instagram for deals of the day
+- Post regularly about new deals
+
+### Local Marketing:
+- Chamber of Commerce
+- Local Facebook groups
+- Community bulletin boards
+- Local newspaper
+
+
+Google docs access:
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRdvjW-DcQ4LDafBBK0sEXvRr6IYjZR-xwrSJSQ1YnxgD75C8gC-Efeo0xHInayMeX-6CYPMYlvpBYH/pub?output=csv
