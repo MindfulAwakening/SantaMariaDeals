@@ -37,6 +37,8 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
         }
 
         .tagline {
@@ -84,8 +86,18 @@
         }
 
         .hero h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .cta-buttons {
@@ -363,7 +375,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>🏪 Santa Maria Local Deals</h1>
+                <h1 style="font-weight: 900; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);">🏪 Santa Maria Deals</h1>
                 <p class="tagline">Connecting Local Businesses with Our Community</p>
             </div>
         </div>
@@ -386,6 +398,17 @@
             <div class="cta-buttons">
                 <a href="#deals" class="btn btn-primary">Browse Deals</a>
                 <a href="#signup" class="btn btn-secondary">List Your Business Free</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="deals">
+        <div class="container">
+            <h2>Featured Local Deals</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Check out these amazing offers from businesses in Santa Maria</p>
+            <div class="deals-grid" id="dealsContainer">
+                <!-- Deals will be loaded here dynamically -->
+                <p style="text-align: center; grid-column: 1/-1;">Loading deals...</p>
             </div>
         </div>
     </section>
@@ -428,17 +451,6 @@
         </div>
     </section>
 
-    <section id="deals">
-        <div class="container">
-            <h2>Featured Local Deals</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Check out these amazing offers from businesses in Santa Maria</p>
-            <div class="deals-grid" id="dealsContainer">
-                <!-- Deals will be loaded here dynamically -->
-                <p style="text-align: center; grid-column: 1/-1;">Loading deals...</p>
-            </div>
-        </div>
-    </section>
-
     <section id="businesses">
         <div class="container">
             <h2>For Local Businesses</h2>
@@ -459,31 +471,39 @@
         </div>
     </section>
 
-   <section id="signup">
-    <div class="container">
-        <h2>Sign Up Your Business</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">
-            Join Santa Maria Local Deals today and start attracting more customers!
-        </p>
-        
-        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-           <!-- PASTE YOUR GOOGLE FORM IFRAME HERE -->
-            <<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgNkdbFCbDZ2kdQi743MA20ulGU7uVfVuupOTAg5UX0n1RXA/viewform?embedded=true"
-                width="100%" 
-                height="1800" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0"
-                style="border: none; border-radius: 10px;">
-                Loading form…
-            </iframe>
+    <section id="signup">
+        <div class="container">
+            <h2>Sign Up Your Business</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Join Santa Maria Local Deals today and start attracting more customers!</p>
+            
+            <!-- OPTION 1: GOOGLE FORM EMBED (Recommended for GitHub Pages) -->
+            <!-- INSTRUCTIONS: 
+                1. Create your Google Form at forms.google.com
+                2. Click Send → < > (embed icon)
+                3. Copy the iframe code
+                4. Replace the iframe below with your code
+                5. Make sure to set width="100%" and height="1800"
+            -->
+            <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                <!-- PASTE YOUR GOOGLE FORM IFRAME HERE -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScgNkdbFCbDZ2kdQi743MA20ulGU7uVfVuupOTAg5UX0n1RXA/viewform?embedded=true" 
+                    width="100%" 
+                    height="1800" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    style="border: none; border-radius: 10px;">
+                    Loading form…
+                </iframe>
+                <!-- If you see "YOUR_GOOGLE_FORM_EMBED_URL_HERE", you need to replace it with your actual Google Form URL -->
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; color: #666; font-size: 0.9rem;">
+                Your information is secure and will only be used to list your business on our platform.
+            </p>
         </div>
-        
-        <p style="text-align: center; margin-top: 2rem; color: #666; font-size: 0.9rem;">
-            Your information is secure and will only be used to list your business on our platform.
-        </p>
-    </div>
-</section>
+    </section>
 
     <section id="contact">
         <div class="container">
@@ -492,7 +512,7 @@
                 Have questions about listing your business or need help? We're here to help local businesses succeed!
             </p>
             <p style="text-align: center; margin-top: 1rem; font-size: 1.2rem;">
-                📧 Email: <a href="mailto:genarl13@yahoo.com" style="color: #667eea;">info@santamarialocaldeals.com</a>
+                📧 Email: <a href="mailto:info@santamarialocaldeals.com" style="color: #667eea;">info@santamarialocaldeals.com</a>
             </p>
         </div>
     </section>
@@ -517,7 +537,7 @@
                 </div>
             </div>
             <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #4a5568;">
-                &copy; 2024 Santa Maria Local Deals. All rights reserved.
+                &copy; 2024 Santa Maria Deals. All rights reserved.
             </p>
         </div>
     </footer>
@@ -525,6 +545,52 @@
     <script>
         // REPLACE THIS URL WITH YOUR GOOGLE SHEETS CSV URL
         const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR_Wml_SQOj-q5_52DPn39ZXneMvJ3rw9qQimMx8DdePUw4khmbCvEFuVfzYZ8SylEPiIcoLt7XRKGz/pub?gid=1451323890&single=true&output=csv';
+        
+        // Sample deals for testing (remove once Google Sheets is working)
+        const SAMPLE_DEALS = [
+            {
+                id: '1',
+                businessName: "Maria's Pizzeria",
+                category: 'restaurant',
+                icon: '🍕',
+                dealTitle: 'Family Pizza Deal',
+                dealDescription: 'Get a free medium pizza when you buy two large pizzas. Valid Monday-Thursday.',
+                discount: 'Buy 2 Get 1 Free',
+                phone: '(805) 555-0123',
+                address: '123 Main St, Santa Maria, CA',
+                website: 'https://mariaspizzeria.com',
+                expirationDate: '12/31/2024',
+                active: 'TRUE'
+            },
+            {
+                id: '2',
+                businessName: 'Bella Hair Salon',
+                category: 'services',
+                icon: '✂️',
+                dealTitle: 'New Customer Special',
+                dealDescription: '20% off all haircuts for new customers. Mention this deal when booking.',
+                discount: '20% OFF',
+                phone: '(805) 555-0456',
+                address: '456 Broadway, Santa Maria, CA',
+                website: 'https://bellahairsalon.com',
+                expirationDate: '01/15/2025',
+                active: 'TRUE'
+            },
+            {
+                id: '3',
+                businessName: 'FitLife Gym',
+                category: 'health',
+                icon: '🏋️',
+                dealTitle: 'Membership Special',
+                dealDescription: 'First month free with 6-month membership. Includes all classes!',
+                discount: '1 Month Free',
+                phone: '(805) 555-0789',
+                address: '789 Oak Avenue, Santa Maria, CA',
+                website: 'https://fitlifegym.com',
+                expirationDate: '03/31/2025',
+                active: 'TRUE'
+            }
+        ];
         
         // Parse CSV data
         function parseCSV(csv) {
@@ -624,54 +690,77 @@
             }
         }
         
+        // Display deals on page
+        function displayDeals(deals) {
+            const dealsContainer = document.getElementById('dealsContainer');
+            
+            if (deals && deals.length > 0) {
+                // Filter out expired deals
+                const activeDeals = deals.filter(deal => !isExpired(deal.expirationDate));
+                
+                if (activeDeals.length === 0) {
+                    dealsContainer.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">No active deals at the moment. Check back soon!</p>';
+                    return;
+                }
+                
+                // Sort deals by expiration date (soonest first)
+                activeDeals.sort((a, b) => {
+                    const daysA = getDaysUntilExpiration(a.expirationDate);
+                    const daysB = getDaysUntilExpiration(b.expirationDate);
+                    if (daysA === null) return 1;
+                    if (daysB === null) return -1;
+                    return daysA - daysB;
+                });
+                
+                dealsContainer.innerHTML = activeDeals.map(deal => `
+                    <div class="deal-card">
+                        <div class="deal-image">${deal.icon || '🏪'}</div>
+                        <div class="deal-content">
+                            <h3>${deal.businessName}</h3>
+                            <p><strong>${deal.dealTitle}</strong></p>
+                            <p>${deal.dealDescription}</p>
+                            ${formatExpirationDisplay(deal.expirationDate)}
+                            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                                📍 ${deal.address}<br>
+                                📞 ${deal.phone}
+                                ${deal.website ? `<br>🌐 <a href="${deal.website}" target="_blank" style="color: #667eea;">Visit Website</a>` : ''}
+                            </p>
+                            <span class="deal-discount">${deal.discount}</span>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                dealsContainer.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">No active deals at the moment. Check back soon!</p>';
+            }
+        }
+        
         // Load deals from Google Sheets
         async function loadDeals() {
             const dealsContainer = document.getElementById('dealsContainer');
             
+            // Check if Google Sheets URL is configured
+            if (GOOGLE_SHEETS_URL === 'YOUR_GOOGLE_SHEETS_CSV_URL_HERE') {
+                console.log('Google Sheets URL not configured. Using sample data.');
+                displayDeals(SAMPLE_DEALS);
+                return;
+            }
+            
             try {
+                dealsContainer.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">Loading deals...</p>';
+                
                 const response = await fetch(GOOGLE_SHEETS_URL);
-                if (!response.ok) throw new Error('Failed to fetch');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 
                 const csv = await response.text();
                 const deals = parseCSV(csv);
                 
-                if (deals && deals.length > 0) {
-                    // Sort deals by expiration date (soonest first)
-                    deals.sort((a, b) => {
-                        const daysA = getDaysUntilExpiration(a.expirationDate);
-                        const daysB = getDaysUntilExpiration(b.expirationDate);
-                        if (daysA === null) return 1;
-                        if (daysB === null) return -1;
-                        return daysA - daysB;
-                    });
-                    
-                    dealsContainer.innerHTML = deals.map(deal => `
-                        <div class="deal-card">
-                            <div class="deal-image">${deal.icon || '🏪'}</div>
-                            <div class="deal-content">
-                                <h3>${deal.businessName}</h3>
-                                <p><strong>${deal.dealTitle}</strong></p>
-                                <p>${deal.dealDescription}</p>
-                                ${formatExpirationDisplay(deal.expirationDate)}
-                                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                                    📍 ${deal.address}<br>
-                                    📞 ${deal.phone}
-                                    ${deal.website ? `<br>🌐 <a href="${deal.website}" target="_blank" style="color: #667eea;">Visit Website</a>` : ''}
-                                </p>
-                                <span class="deal-discount">${deal.discount}</span>
-                            </div>
-                        </div>
-                    `).join('');
-                } else {
-                    dealsContainer.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">No active deals at the moment. Check back soon!</p>';
-                }
+                displayDeals(deals);
             } catch (error) {
-                console.error('Error loading deals:', error);
-                dealsContainer.innerHTML = `
-                    <p style="text-align: center; grid-column: 1/-1; color: #ff6b6b;">
-                        Unable to load deals. Please check back later or contact us if the problem persists.
-                    </p>
-                `;
+                console.error('Error loading deals from Google Sheets:', error);
+                console.log('Falling back to sample data');
+                displayDeals(SAMPLE_DEALS);
             }
         }
 
@@ -708,11 +797,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
