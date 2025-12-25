@@ -1,5 +1,8 @@
-title: Merlot theme
-description: Merlot is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
+title: Santa Maria Deals
+description: Local deals and offers in Santa Maria
 theme: jekyll-theme-merlot
+
+url: "https://mindfulawakening.github.io"
+baseurl: "/SantaMariaDeals"
+
+show_downloads: false
